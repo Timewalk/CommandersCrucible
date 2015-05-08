@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>480</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Planet
+--
+- string owner
+- string name
+- SerialVector position 
+- int troops
+
+- int recruitment
+- int training
+- int revenue
+- int spyShips</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>550</y>
+      <w>230</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>SerialVector
+--
+- float x
+- float y
+- float z
+	
+//Constructors	
+SerialVector(float, float, float)	
+SerialVector(Vector3)	
+
+--
+//Static Functions	
+static SerialVector toVector3()	</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>280</y>
+      <w>240</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>SavedGame
+--
+- List&lt;Player&gt; Players
+- List&lt;Planet&gt; 
+
+--
++ void AddPlayer(Player)
++ void AddPlanet(Planet)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>550</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>400</y>
+      <w>80</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;40.0;60.0;40.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>50</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>GameManager
+--
+- static SavedGame gameData
+
+--
++ void SaveGame()
++ void LoadGame()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>480</y>
+      <w>250</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+- string name
+- int cash
+- List&lt;*Planet&gt; planets
+
+--
+- void SetCash()
++ int GetTotalTroops()
++ int GetTotalTraining()
++ int GetTotalRevenue()
++ int GetTotalSpyShips()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>400</y>
+      <w>150</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;80.0;130.0;40.0;10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>220</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
